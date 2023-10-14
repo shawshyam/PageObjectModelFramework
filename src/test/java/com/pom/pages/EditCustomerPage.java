@@ -23,7 +23,9 @@ public class EditCustomerPage extends CommonUtils {
 		
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.loginIntoApp(url, userId, password);
+		this.waitForElementVisiblity(editCustomerLink);
 		this.clickElements(editCustomerLink);
+		this.waitForElementVisiblity(customerIdInput);
 		this.type(customerIdInput, customerId);
 		this.clickElements(submit);
 		

@@ -26,6 +26,7 @@ public class LoginPage extends CommonUtils {
 	
 	public void loginIntoApp(String url, String userId, String password) {
 		this.navigateToUrl(url);
+		this.waitForElementVisiblity(userIdInput);
 		this.type(userIdInput, userId);
 		this.type(passwordInput, password);
 		this.clickElements(loginButton);

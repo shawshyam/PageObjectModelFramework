@@ -3,6 +3,7 @@ package com.pom.utils;
 //import org.openqa.selenium.By;
 
 import java.io.FileInputStream;
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
@@ -12,8 +13,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 /**
@@ -25,10 +26,10 @@ import org.testng.annotations.BeforeTest;
 
 public class Hooks {
 	
-	public Properties config;
+	public static Properties config;
 	public WebDriver driver;
 	
-	@BeforeSuite
+	@BeforeClass
 	public void beforeAll() {
 		 config = new Properties();
 		 try {

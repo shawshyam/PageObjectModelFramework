@@ -10,8 +10,8 @@
           <include name="editCustomarTest"/>
           <include name="afterTest"/>
           <include name="beforeAll"/>
-          <include name="beforeTest"/>
           <include name="afterMethod"/>
+          <include name="beforeTest"/>
         </methods>
       </class> <!-- com.pom.tests.EditCustomarTest -->
     </classes>
